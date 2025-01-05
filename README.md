@@ -20,10 +20,9 @@ crewai install
 ```
 ### Customizing
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
-**Add your `LANGTRACE_API_KEY` into the `.env` file**
-**Add your `MODEL` into the `.env` file**
-
+- Add your `OPENAI_API_KEY` into the `.env` file
+- Add your `LANGTRACE_API_KEY` into the `.env` file
+- Add your `MODEL` into the `.env` file
 - Modify `src/hello_ai_agents/config/agents.yaml` to define your agents
 - Modify `src/hello_ai_agents/config/tasks.yaml` to define your tasks
 - Modify `src/hello_ai_agents/crew.py` to add your own logic, tools and specific args
