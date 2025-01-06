@@ -1,17 +1,50 @@
-research_task:
+blog_discovery_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is 2024.
+    Search for the latest trending ASP.NET Core blog posts and articles.
+    Focus on content from the last 3 months from reputable sources like:
+    - Official Microsoft blogs
+    - Popular developer platforms (dev.to, Medium)
+    - Well-known ASP.NET Core community bloggers
+    Exclude promotional content and focus on technical value.
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
-  agent: researcher
+    A list of at least 10 potential blog posts with their URLs, 
+    publication dates, and brief descriptions.
+  agent: aspnet_blog_finder
 
-reporting_task:
+content_analysis_task:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    Review the provided blog posts for technical accuracy, depth, and relevance.
+    For each post:
+    - Verify any code examples
+    - Assess technical accuracy
+    - Evaluate relevance for ASP.NET Core developers
+    - Create a brief summary
+    - Rate the content (1-5 stars)
   expected_output: >
-    A fully fledge reports with the mains topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
+    A detailed analysis of each blog post including:
+    - Technical accuracy rating
+    - Code quality assessment
+    - Key takeaways
+    - Overall rating
+    Only posts rated 4+ stars should move forward.
+  agent: aspnet_content_analyst
+
+link_curation_task:
+  description: >
+    Organize and present the validated blog posts in a structured format.
+    For each post:
+    - Create a clear, concise description
+    - Add relevant tags/categories
+    - Include publication date and estimated reading time
+    - Ensure link is properly formatted
+    Group posts by topic/category for easy navigation.
+  expected_output: >
+    A markdown-formatted list of curated blog posts organized by category,
+    each with:
+    - Title and link
+    - Description
+    - Tags/categories
+    - Publication date
+    - Estimated reading time
+    - Key takeaways
+  agent: aspnet_link_curator

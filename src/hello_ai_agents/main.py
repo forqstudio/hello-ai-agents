@@ -15,10 +15,7 @@ def run():
     """
     Run the crew.
     """
-    inputs = {
-        'topic': 'AI LLMs'
-    }
-    HelloAiAgents().crew().kickoff(inputs=inputs)
+    HelloAiAgents().aspnet_blog_crew().kickoff()
 
 
 def train():
